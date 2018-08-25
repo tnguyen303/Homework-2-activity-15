@@ -1,0 +1,85 @@
+body{
+    height: 98vh;
+    display: grid;
+    grid-template-rows: 20% 1fr;
+    grid-template-columns: 1fr;
+    background-color: rgb(34, 34, 34);
+}
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 35px;
+    color: white;
+}
+h2{
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: white;
+}
+.titles{
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+main{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.subbox{
+    grid-row: span 1;
+    grid-column: span 1;
+    width: auto;
+    height: 230px;  
+    background-position: center;
+}
+.pictitle{
+    padding: 10px 20px 10px 0px;
+    font-size: 20px;
+    background-color: white;
+    border: dotted 1px black;
+    padding-left: 20px;
+}
+.boat{
+    background: 400px url('images/lake.jpg');
+}
+.building{
+    background-image: url('images/empire.jpg');
+}
+.human{
+    background-image: url('images/person.jpg');
+}
+.tree{
+    background-image: url('images/tree.jpg');
+}
+.architecture{
+    background-image: url('images/geo.jpg');
+}
+.sand{
+    background-image: url('images/sand.jpg');
+}
+.bridge{
+    background-image: url('images/bridge.jpg');
+}
+.camera{
+    background-image: url('images/lens.jpg');
+}
+
+@media only screen and (min-width: 600px){
+    body{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }    
+    main{
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .subbox{
+        background-position: center;
+    }
+}
